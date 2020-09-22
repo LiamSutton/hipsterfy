@@ -13,26 +13,8 @@ class App extends React.Component {
     let accessToken = queryString.parse(window.location.hash).access_token || null
 
     this.state = {
-      accessToken: accessToken,
-      id: null
+      accessToken: accessToken
     };
-  }
- 
-  componentDidMount() {
-    // The application will only request a users details if the user is already authenticated when the app is initialized
-    if (this.state.accessToken !== null) {
-      fetch('https://api.spotify.com/v1/me', {
-        headers: {
-          'Authorization': 'Bearer ' + this.state.accessToken
-        }
-      }).then(response => {
-        response.json().then(data => {
-          this.setState({
-            id: data.id
-          })
-        })
-      })
-    }
   }
 
   render() {
