@@ -1,0 +1,14 @@
+.LoginForm {
+    background-color: rgba(0, 0, 0, 0.4);
+    margin-top: 200px;
+
+}
+.LoginForm-Button {
+    margin-top: 20px;
+    padding: 20px;
+    border-radius: 30px;
+}
+
+.jumbotron {
+    background-color: rgba(0, 0, 0, 0.2);
+  }
