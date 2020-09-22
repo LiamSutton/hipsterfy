@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-// import Secrets from './Secrets.js'
+import Secrets from './Secrets.js'
 import './LoginForm.css'
 
 class LoginForm extends React.Component {
@@ -12,12 +12,12 @@ class LoginForm extends React.Component {
         // Credentials required to authenticate with spotify
     
         // LOCAL BUILD
-        // const CLIENT_ID = Secrets.client_id;
-        // const CLIENT_SECRET = Secrets.client_secret;
+        const CLIENT_ID = Secrets.client_id;
+        const CLIENT_SECRET = Secrets.client_secret;
 
-        // HEROKU BUILD
-        const CLIENT_ID = process.env.client_id;
-        const CLIENT_SECRET = process.env.client_secret 
+        // // HEROKU BUILD
+        // const CLIENT_ID = process.env.client_id;
+        // const CLIENT_SECRET = process.env.client_secret 
 
         // the URI spotify will return to after a successful handshake
         const REDIRECT_URI = 'http://localhost:3000/callback'
