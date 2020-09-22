@@ -11,9 +11,11 @@ class App extends React.Component {
     };
   }
 
+  // When the component is initialized check the hash string for the current window (if the user is authenticated there will be a token in the hash)
   componentDidMount() {
     let accessToken = window.location.hash.substring(14);
 
+    // This will determine whether a login screen is shown or the application will load
     if (accessToken != null) {
       this.setState({
         accessToken: accessToken

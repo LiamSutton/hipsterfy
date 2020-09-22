@@ -8,14 +8,23 @@ class LoginForm extends React.Component {
     }
 
     render() {
-
+        
+        // Credentials required to authenticate with spotify
         const CLIENT_ID = Secrets.client_id;
         const CLIENT_SECRET = Secrets.client_secret;
+
+        // the URI spotify will return to after a successful handshake
         const REDIRECT_URI = 'http://localhost:3000/callback'
+
+        // The permissions the app needs granted by the user
         const SCOPE = 'user-read-private user-read-email';
+
+        // The base endpoint for /Authorize
         const AUTH_ENDPOINT = 'https://accounts.spotify.com/authorize';
+
+        // The full link for /Authorize
         const AUTH_URL = `${AUTH_ENDPOINT}?client_id=${CLIENT_ID}&redirect_uri=${REDIRECT_URI}&scope=${SCOPE}&response_type=token&show_dialog=true`
-        
+
         return(
             <div className="LoginForm">
                     <div className="jumbotron">
