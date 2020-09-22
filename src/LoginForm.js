@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import Secrets from './Secrets.js'
+// import Secrets from './Secrets.js'
 import './LoginForm.css'
 
 class LoginForm extends React.Component {
@@ -10,7 +10,7 @@ class LoginForm extends React.Component {
     render() {
         
         // Credentials required to authenticate with spotify
-        
+    
         // LOCAL BUILD
         // const CLIENT_ID = Secrets.client_id;
         // const CLIENT_SECRET = Secrets.client_secret;
