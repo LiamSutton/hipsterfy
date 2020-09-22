@@ -16,8 +16,8 @@ class LoginForm extends React.Component {
         // const CLIENT_SECRET = Secrets.client_secret;
 
         // HEROKU BUILD
-        const CLIENT_ID = ENV['client_id'];
-        const CLIENT_SECRET = ENV['client_secret'] 
+        const CLIENT_ID = process.env.client_id;
+        const CLIENT_SECRET = process.env.client_secret 
 
         // the URI spotify will return to after a successful handshake
         const REDIRECT_URI = 'http://localhost:3000/callback'
