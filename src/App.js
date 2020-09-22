@@ -5,9 +5,24 @@ import './App.css';
 class App extends React.Component {
   constructor(props) {
     super()
+
+    this.state = {
+      accessToken: null
+    };
+  }
+
+  componentDidMount() {
+    let accessToken = window.location.hash.substring(14);
+
+    if (accessToken != null) {
+      this.setState({
+        accessToken: accessToken
+      });
+    }
   }
 
   render() {
+
     return (
       <div className="App">
         <header>
