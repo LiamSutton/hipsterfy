@@ -10,7 +10,16 @@ class App extends React.Component {
   render() {
     return (
       <div className="App">
-        <LoginForm />
+        <header>
+          <h2 className="display-3">H I P S T E R F Y</h2>
+        </header>
+        <main className="App-Content">
+          <LoginForm />
+        </main>
+
+        <footer className="App-Footer">
+          <p>Made with ❤ by Liam Sutton</p>
+        </footer>
       </div>
     );
   }
