@@ -1,0 +1,7 @@
+.Playlist-Img {
+    height: 320px;
+    width: 320px;
+    filter: brightness(20%);
+    margin-top: 5px;
+    margin-bottom: 5px;
+}

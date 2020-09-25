@@ -7,7 +7,7 @@ class PlaylistCollection extends React.Component {
         super(props);
 
         this.state = {
-            playlists: null
+            playlists: []
         }
     }
     
@@ -25,13 +25,28 @@ class PlaylistCollection extends React.Component {
                 })
             })
         })
+
+        // Alternate way of performing fetch calls 
+        // const getPlaylists = async () => {
+        //     const response = await fetch('https://api.spotify.com/v1/me/playlists?limit=50', {
+        //         headers: {'Authorization': 'Bearer ' + this.props.accessToken}
+        //     });
+        //     const json = await response.json();
+        //     this.setState({
+        //         playlists: json.items
+        //     })
+        // }
+        // getPlaylists();
     }
 
     render() {
-        let playlists = this.state.playlists != null ?
-            this.state.playlists.map((playlist) => {return <Playlist id={playlist.id}/>}) :
-            <h2>Unable to retrieve playlist data...</h2>;
+        // let playlists = this.state.playlists != null ?
+        //     this.state.playlists.map((playlist) => {return <Playlist playlistLink={playlist.href} accessToken={this.props.accessToken}/>}) :
+        //     <h2>Unable to retrieve playlist data...</h2>;
 
+        let playlists = this.state.playlists.map((playlist) => {
+            return <Playlist playlistLink={playlist.href} accessToken={this.props.accessToken}/>
+        })
         return (
             <div className="row">
                {playlists}

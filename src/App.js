@@ -18,14 +18,13 @@ class App extends React.Component {
   }
 
   render() {
-     let content = this.state.accessToken ? <PlaylistCollection accessToken={this.state.accessToken} id={this.state.id} /> : <LoginForm />
     return ( 
       <div className="App">
         <header>
           <h2 className="display-3">H I P S T E R F Y</h2>
         </header>
         <main className="App-Content">
-          {content}
+          {this.state.accessToken ? <PlaylistCollection accessToken={this.state.accessToken} id={this.state.id} /> : <LoginForm />}
         </main>
 
         <footer className="App-Footer">
